@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEUMER Group Alarm Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="chatbot-header">
+        <button id="openSidebarBtn" class="chatbot-sidebar-open-btn" onclick="openSidebar()">
+            <img src="icons/menu.svg" class="icon-img" alt="Menu">
+        </button>
+        <img src="logos/Beumer_logo_W.png" class="header-logo" id="headerLogo" alt="Beuemr Group">
+        <a href="home_Page.html" class="hometab">
+            <img src="icons/home.svg" class="icon-img" alt="Home">
+        </a>
+    </header>
+
+
+    <div class="chatbot-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="chatbot-sidebar" id="chatbotSidebar">
+            <div class="chatbot-sidebar-header">
+                <img src="logos/Logo-BEUMER-Group.webp" class="chatbot-sidebar-logo">
+
+                <button onclick="closeSidebar()" class="closebtn">
+                    <img src="icons/close.svg" class="icon-img" alt="Close">
+                </button>
+            </div>
+            <button class="btn" onclick="startNewChat()">New Conversation</button>
+            <a href="recents_Page.html">
+                <button class="btn">Recent Conversation</button>
+            </a>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="chatbot-main">
+
+    <!-- START SCREEN -->
+    <div class="chatbot-center" id="startScreen">
+
+        <img src="logos/Logo-BEUMER-Group.webp" class="chatbot-brand-logo">
+
+        <div class="chatbot-search">
+            <input class="chatbot-search-input" id="queryInput" placeholder="Ask Your Query">
+            <input class="chatbot-search-input_2" id="alarmCodeInput" placeholder="Enter Alarm Code">
+            <button class="chatbot-search-btn" onclick="openChat()">
+                Search
+            </button>
+        </div>
+
+    </div>
+
+    <!-- CHAT SCREEN -->
+    <div class="chat-area" id="chatArea">
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">Hello 👋 How can I help you?</div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+
+</main>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="chatbot-footer"></footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
